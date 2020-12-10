@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+	box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	background-image: url(images/27ab28101267243.5f1ac53736beb.jpg);
+	background-size: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper {
+	width: 100%;
+	height: 700px;
+	padding: 60px 100px;
+	display: flex;
 }
-
-.App-link {
-  color: #61dafb;
+.dropdown {
+	position: absolute;
+	top: 100px;
+	width: 300px;
+	transform: translateX(-45%);
+	background-color: rgb(124, 199, 179);
+	border: var(--border-radius);
+	padding: 1rem;
+	overflow: hidden;
+	transition: height var(--speed) ease;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-item {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	border-radius: var(--border-radius);
+	transition: background var(--speed);
+	background-color: transparent;
+	padding: 0.5rem;
+	box-shadow: none;
+	transition: height var(--speed) ease;
+}
+.menu-item:hover {
+	background-color: rgba(155, 155, 155, 0.473);
+	transition: transform 900ms;
+}
+.icon-right {
+	margin-left: auto;
+}
+.leftIcons {
+	color: #fff;
+	background-color: #fff;
+}
+.dropDownLeft {
+	padding: 0px 15px;
+}
+.menu-primary-enter {
+	position: absolute;
+	transform: translateX(-100%);
+}
+.menu-primary-enter-active {
+	transform: translateX(0%);
+	transition: all var(--speed) ease;
+}
+.menu-primary-exit {
+	position: absolute;
+}
+.menu-primary-exit-active {
+	transform: translateX(-100%);
+	transition: all var(--speed) ease;
+}
+.menu-secondary-enter {
+	position: absolute;
+	transform: translateX(100%);
+}
+.menu-secondary-enter-active {
+	transform: translateX(0%);
+	transition: all var(--speed) ease;
+}
+/* .menu-secondary-exit {
+} */
+.menu-secondary-exit-active {
+	transform: translateX(100%);
+	transition: all var(--speed) ease;
 }
